@@ -16,3 +16,11 @@ The output should be sorted by the customer’s last name (ascending).
 
 SELECT contactFirstName AS 'First Name', contactLastName AS 'Last Name' ,city AS 'City' FROM customers
 WHERE country = 'Germany' ORDER BY contactLastName ASC;
+
+/*
+ 3.	Write a query to display each of the unique values of the status field in the orders table.
+  The output should be sorted alphabetically increasing.  Hint: the output should show exactly 6 rows.
+*/
+
+ 
+SELECT STATUS, COUNT(STATUS) AS Num_Orders FROM orders GROUP BY STATUS ORDER BY Num_Orders ASC;
