@@ -31,3 +31,11 @@ SELECT STATUS, COUNT(STATUS) AS Num_Orders FROM orders GROUP BY STATUS ORDER BY 
 */
 
 SELECT * FROM payments WHERE	paymentDate >= '2005-01-01' ORDER BY paymentDate Asc;
+
+/* 
+5. Write a query to display all Last Name, First Name, Email and Job Title of all employees
+working out of the San Francisco office. Output should be sorted by last name.
+*/
+
+SELECT lastName, firstName, email, jobTitle FROM  employees AS e  JOIN offices AS f ON
+e.officeCode = f.officeCode WHERE f.city = 'san francisco' order BY lastName;
