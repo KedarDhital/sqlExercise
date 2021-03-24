@@ -39,3 +39,12 @@ working out of the San Francisco office. Output should be sorted by last name.
 
 SELECT lastName, firstName, email, jobTitle FROM  employees AS e  JOIN offices AS f ON
 e.officeCode = f.officeCode WHERE f.city = 'san francisco' order BY lastName;
+
+/* 
+6.	Write a query to display the Name, Product Line, Scale, and Vendor of all of the car products
+ – both classic and vintage.  The output should display all vintage cars first (sorted alphabetically by name),
+  and all classic cars last (also sorted alphabetically by name).
+*/
+
+SELECT productName, productLine, productScale, productVendor FROM products
+WHERE productLine = 'Vintage Cars' OR productLine = 'Classic Cars' ORDER BY productLine Desc; 
